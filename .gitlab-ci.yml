@@ -1,0 +1,7 @@
+build1:
+  stage: build
+  script:
+    - whoami
+    - cd /home/icr/projects/cfarm/cfarm
+    - source venv/bin/activate
+    - pm2 restart ecosystem.config.js
