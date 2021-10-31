@@ -19,8 +19,8 @@ class OwnerInformation(models.Model):
         return self.last_name
 
     class Meta:
-        verbose_name = "اطلاعات مالک"
-        verbose_name_plural = "اطلاعات مالک"
+        verbose_name = "   اطلاعات مالک"
+        verbose_name_plural = "   اطلاعات مالک"
 
 
 class FarmInformation(models.Model):
@@ -36,8 +36,8 @@ class FarmInformation(models.Model):
         return self.farm_name
 
     class Meta:
-        verbose_name = "اطلاعات فارم"
-        verbose_name_plural = "اطلاعات فارم"
+        verbose_name = "  اطلاعات فارم"
+        verbose_name_plural = "  اطلاعات فارم"
 
 
 class HallInformation(models.Model):
@@ -52,8 +52,8 @@ class HallInformation(models.Model):
         return self.hall_number
 
     class Meta:
-        verbose_name = "اطلاعات سالن"
-        verbose_name_plural = "اطلاعات سالن"
+        verbose_name = " اطلاعات سالن"
+        verbose_name_plural = " اطلاعات سالن"
 
 
 class StandardInformation(models.Model):
