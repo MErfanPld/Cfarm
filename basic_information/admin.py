@@ -3,6 +3,7 @@ from .models import OwnerInformation, FarmInformation, HallInformation, Standard
 
 # Register your models here.
 
+admin.site.site_header = "سامانه مدیریت فارم"
 
 class OwnerInformationAdmin(admin.ModelAdmin):
     list_display = ('first_name', 'first_name',

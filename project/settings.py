@@ -27,7 +27,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['185.128.139.125', 'www.nilasabz.ir', 'nilasabz.ir']
 
-ALLOWED_HOSTS =  ['127.0.0.1','0.0.0.0']
+# ALLOWED_HOSTS =  ['127.0.0.1','0.0.0.0']
 
 # Application definition
 

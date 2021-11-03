@@ -2,25 +2,6 @@ from django.db import models
 from django.utils import timezone
 
 
-class Cost(models.Model):
-    cost_title = models.CharField(
-        blank=True, null=True, max_length=30, verbose_name="شرح هزینه")
-    cost_type = models.CharField(
-        blank=True, null=True, max_length=100, verbose_name="نوع هزینه")
-    cost_date = models.DateField(null=True, blank=True, verbose_name="تاریخ ")
-    cost_amount = models.IntegerField(
-        blank=True, null=True, verbose_name="مبلغ هزینه")
-    cost_description = models.TextField(
-        blank=True, null=True, max_length=300, verbose_name="توضیحات هزینه")
-
-    def __str__(self):
-        return self.cost_type
-
-    class Meta:
-        verbose_name = "  هزینه"
-        verbose_name_plural = "  هزینه"
-
-
 class Income(models.Model):
     income_date = models.DateField(
         null=True, blank=True, verbose_name="تاریخ ")
@@ -36,7 +17,7 @@ class Income(models.Model):
         max_length=500, blank=True, null=True, verbose_name='جمع کل')
     income_of_description = models.TextField(
         blank=True, null=True, max_length=300, verbose_name="توضیحات")
-
+        
     class Meta:
         verbose_name = " درآمد"
         verbose_name_plural = " درآمد"
