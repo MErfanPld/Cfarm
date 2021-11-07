@@ -6,11 +6,11 @@ from .models import OwnerInformation, FarmInformation, HallInformation, Standard
 admin.site.site_header = "سامانه مدیریت فارم"
 
 class OwnerInformationAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'first_name',
+    list_display = ('first_name', 'last_name', 'mobile_number',
                     'number_of_farms', 'total_capacity',)
     list_filter = ('number_of_farms',)
-    search_fields = ('first_name', 'first_name', 'number_of_farms',
-                     'total_capacity',)
+    search_fields = ('first_name', 'last_name', 'mobile_number',
+                     'number_of_farms', 'total_capacity',)
     ordering = ['number_of_farms']
 
 
@@ -30,9 +30,9 @@ admin.site.register(FarmInformation, FarmInformationAdmin)
 
 
 class HallInformationAdmin(admin.ModelAdmin):
-    list_display = ('hall_number', 'capacity',)
-    list_filter = ('hall_number', 'capacity',)
-    search_fields = ('hall_number', 'capacity',)
+    list_display = ('hall_number', 'capacity', 'description',)
+    list_filter = ('hall_number', 'capacity', 'description',)
+    search_fields = ('hall_number', 'capacity', 'description',)
     ordering = ['hall_number']
 
 

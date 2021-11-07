@@ -49,7 +49,7 @@ class HallInformation(models.Model):
         blank=True, null=True, verbose_name="توضیحات")
 
     def __str__(self):
-        return self.hall_number
+        return self.description
 
     class Meta:
         verbose_name = " اطلاعات سالن"

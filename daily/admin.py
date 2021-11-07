@@ -5,10 +5,13 @@ from .models import Daily_Informations, DrugRegistration, VaccineRegistration, W
 
 admin.site.site_header = "سامانه مدیریت فارم"
 
+
 class Daily_InformationsAdmin(admin.ModelAdmin):
-    list_display = ('date',)
+    list_display = ('date', 'hall', 'losses', 'knockout', 'temprature_max',
+                    'temprature_min', 'seed', 'price', 'weight', 'total',)
     list_filter = ('date',)
-    search_fields = ('date',)
+    search_fields = ('date', 'hall', 'losses', 'knockout', 'temprature_max',
+                     'temprature_min', 'seed', 'price', 'weight', 'total',)
     ordering = ['-date']
 
 

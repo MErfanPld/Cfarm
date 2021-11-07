@@ -1,10 +1,13 @@
 from django.db import models
+from basic_information.models import HallInformation
 
 
 # Create your models here.
 
 class Daily_Informations(models.Model):
     date = models.DateField(verbose_name="تاریخ ")
+    hall = models.ForeignKey(HallInformation, null=True, on_delete=models.SET_NULL,
+                             related_name="halls", verbose_name="سالن")
     losses = models.IntegerField(verbose_name='تلفات جوجه', default=0)
     knockout = models.IntegerField(verbose_name='حذفیات جوجه', default=0)
     temprature_max = models.FloatField(
