@@ -5,27 +5,19 @@ from basic_information.models import HallInformation
 # Create your models here.
 
 class Daily_Informations(models.Model):
-    date = models.DateField(verbose_name="تاریخ ")
     hall = models.ForeignKey(HallInformation, null=True, on_delete=models.SET_NULL,
                              related_name="halls", verbose_name="سالن")
+    date = models.DateField(verbose_name="تاریخ ")
     losses = models.IntegerField(verbose_name='تلفات جوجه', default=0)
     knockout = models.IntegerField(verbose_name='حذفیات جوجه', default=0)
+    seed = models.FloatField(
+        verbose_name='دان مصرفی در روز', null=True, blank=True)
     temprature_max = models.FloatField(
         verbose_name='کمترین دمای روز', null=True, blank=True)
     temprature_min = models.FloatField(
         verbose_name='بیشترین دمای روز', null=True, blank=True)
-    seed = models.FloatField(
-        verbose_name='دانه مصرفی در روز', null=True, blank=True)
     price = models.CharField(max_length=500, blank=True,
                              null=True, verbose_name='قیمت واحد')
-    weight = models.FloatField(
-        max_length=500, blank=True, null=True, verbose_name='وزن')
-    total = models.CharField(max_length=500, blank=True,
-                             null=True, verbose_name='جمع کل')
-    vaccine_registration = models.TextField(
-        null=False, blank=True, default=' ثبت نشده', max_length=200, verbose_name='ثبت واکسن')
-    weight_registration = models.TextField(
-        null=False, blank=True, default=' ثبت نشده', max_length=200, verbose_name='ثبت وزن کشی')
     descriptions = models.TextField(
         null=False, blank=True, default=' ثبت نشده', max_length=200, verbose_name='توضیحات')
 
@@ -55,7 +47,13 @@ class VaccineRegistration(models.Model):
 
 
 class WeightRegistration(models.Model):
-    id = models.AutoField(primary_key=True, verbose_name='ایدی')
+    date = models.DateField(verbose_name="تاریخ ")
+    age = models.FloatField(verbose_name="سن")
+    total = models.FloatField(verbose_name="جمع کل وزن جوجه")
+    dispersion = models.FloatField(verbose_name="پراکندگی")
+    average = models.FloatField(verbose_name="میانگین")
+    
+    
 
     class Meta:
         verbose_name = "ثبت اطلاعات وزن کشی"

@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'finance.apps.FinanceConfig',
     'daily.apps.DailyConfig',
     'basic_information',
+    'extenstions',
+
 
     'admin_interface',
     'colorfield',

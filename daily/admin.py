@@ -7,11 +7,11 @@ admin.site.site_header = "سامانه مدیریت فارم"
 
 
 class Daily_InformationsAdmin(admin.ModelAdmin):
-    list_display = ('date', 'hall', 'losses', 'knockout', 'temprature_max',
-                    'temprature_min', 'seed', 'price', 'weight', 'total',)
-    list_filter = ('date',)
+    list_display = ('hall', 'date', 'hall', 'losses', 'knockout', 'temprature_max',
+                    'temprature_min', 'seed', 'price',)
+    list_filter = ('hall', 'date',)
     search_fields = ('date', 'hall', 'losses', 'knockout', 'temprature_max',
-                     'temprature_min', 'seed', 'price', 'weight', 'total',)
+                     'temprature_min', 'seed', 'price',)
     ordering = ['-date']
 
 
