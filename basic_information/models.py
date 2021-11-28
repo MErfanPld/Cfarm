@@ -20,7 +20,7 @@ class OwnerInformation(models.Model):
 
     class Meta:
         verbose_name = "اطلاعات مالک"
-        verbose_name_plural = "اطلاعات مالک"
+        verbose_name_plural = "   اطلاعات مالک"
 
 
 class FarmInformation(models.Model):
@@ -37,7 +37,7 @@ class FarmInformation(models.Model):
 
     class Meta:
         verbose_name = "اطلاعات فارم"
-        verbose_name_plural = "اطلاعات فارم"
+        verbose_name_plural = "  اطلاعات فارم"
 
 
 class HallInformation(models.Model):
@@ -53,7 +53,7 @@ class HallInformation(models.Model):
 
     class Meta:
         verbose_name = "اطلاعات سالن"
-        verbose_name_plural = "اطلاعات سالن"
+        verbose_name_plural = " اطلاعات سالن"
 
 
 class StandardInformation(models.Model):
@@ -86,17 +86,49 @@ class StandardInformation(models.Model):
         verbose_name_plural = "اطلاعات استاندارد"
 
 
-# class VaccineProgramInformation(models.Model):
-#     pass
+class CourseInformation(models.Model):
+    pass
 
-    # class Meta:
-    #     verbose_name = "اطلاعات واکسن "
-    #     verbose_name_plural = "اطلاعات واکسن"
+    class Meta:
+        verbose_name = "اطلاعات دوره "
+        verbose_name_plural = "اطلاعات دوره"
 
 
-# class ShutdownProgramInformation(models.Model):
-#     pass
+class ChickenInformation(models.Model):
+    pass
 
-    # class Meta:
-    #     verbose_name = "اطلاعات خاموشی"
-    #     verbose_name_plural = "اطلاعات خاموشی"
+    class Meta:
+        verbose_name = "اطلاعات جوجه "
+        verbose_name_plural = "اطلاعات جوجه"
+
+
+class BlackoutProgram(models.Model):
+    pass
+
+    class Meta:
+        verbose_name = "برنامه خاموشی"
+        verbose_name_plural = "برنامه خاموشی"
+
+
+class DietPlan(models.Model):
+    pass
+
+    class Meta:
+        verbose_name = "برنامه جیره غذایی"
+        verbose_name_plural = "برنامه جیره غذایی"
+
+
+class VaccineProgramInformation(models.Model):
+    pass
+
+    class Meta:
+        verbose_name = "اطلاعات واکسن "
+        verbose_name_plural = "اطلاعات واکسن"
+
+
+class ShutdownProgramInformation(models.Model):
+    pass
+
+    class Meta:
+        verbose_name = "اطلاعات خاموشی"
+        verbose_name_plural = "اطلاعات خاموشی"

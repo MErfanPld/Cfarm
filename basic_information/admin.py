@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import OwnerInformation, FarmInformation, HallInformation, StandardInformation
+from .models import OwnerInformation, FarmInformation, HallInformation, StandardInformation, CourseInformation, ChickenInformation, BlackoutProgram, DietPlan, VaccineProgramInformation, ShutdownProgramInformation
 
 # Register your models here.
 
@@ -46,3 +46,10 @@ class StandardInformationAdmin(admin.ModelAdmin):
 
 
 admin.site.register(StandardInformation, StandardInformationAdmin)
+
+admin.site.register(CourseInformation)
+admin.site.register(ChickenInformation)
+admin.site.register(BlackoutProgram)
+admin.site.register(DietPlan)
+admin.site.register(VaccineProgramInformation)
+admin.site.register(ShutdownProgramInformation)

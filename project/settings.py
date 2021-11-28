@@ -34,7 +34,8 @@ INSTALLED_APPS = [
     # apps from above
     'finance.apps.FinanceConfig',
     'daily.apps.DailyConfig',
-    'basic_information',
+    'basic_information.apps.BasicInformationConfig',
+    'breeding_management.apps.BreedingManagementConfig',
 
     'admin_interface',
     'colorfield',
@@ -90,6 +91,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 #    }
 # }
 
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -101,14 +103,16 @@ WSGI_APPLICATION = 'project.wsgi.application'
 #     }
 # }
 
+# ======================= pouladzadeh =======================#
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'myproject1',
         'USER': 'postgres',
         'PASSWORD': 'root',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        # 'HOST': '127.0.0.1',
+        # 'PORT': '5432',
     }
 }
 
@@ -146,9 +150,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+# STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+# # Default primary key field type
+# # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATIC_URL = '/site_statics/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "assets")
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn", "static_root")
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "static_cdn", "media_root")
